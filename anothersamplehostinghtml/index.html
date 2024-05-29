@@ -1,0 +1,33 @@
+<h1>Another sample hosting html</h1>
+<h2>General intruction for deploying site in firebase.</h2>
+<ol>
+	<li>npm install -g firebase-tools (if your already installed in your local computer? just skip this)</li>
+	<li>firebase login (if your already installed in your local computer? just skip this)</li>
+	<li>firebase init</li>
+	<li>firebase deploy</li>
+</ol>
+
+<h1>You can also deploy many site in same project in firebase</h1>
+<h2>intruction for <i>deploying another site</i> in firebase.</h2>
+<ol>
+	<li>npm install -g firebase-tools (if your already installed in your local computer? just skip this)</li>
+	<li>firebase login (if your already installed in your local computer? just skip this)</li>
+	<li>
+		Create a new file called <i><b>"firebase.json"</b></i><br>
+		Add this code <br>
+		<code>
+{
+	"hosting":{
+		"site": "anothersamplehostinghtml",
+		"public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+		</code>
+	</li>
+	<li><code>firebase deploy --only hosting:anothersamplehostinghtml</code></li>
+</ol>
